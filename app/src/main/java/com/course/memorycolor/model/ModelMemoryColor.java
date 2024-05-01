@@ -37,23 +37,6 @@ public class ModelMemoryColor {
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
-
-//    public static ModelMemoryColor initialize(Context context){
-//        if (mInstance == null)
-//        {
-//            mInstance = new ModelMemoryColor(context);
-//        }
-//        return mInstance;
-//    }
-//
-//    public static ModelMemoryColor getInstance() throws Exception {
-//        if (mInstance == null)
-//        {
-//            throw new Exception("No ModelMemoryColor Initialized, initialize the model first");
-//        }
-//        return mInstance;
-//    }
-
     public enum GameState {
         GameInactive, GameAnimating, GameUserPlay
     }

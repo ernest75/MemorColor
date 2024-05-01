@@ -1,5 +1,6 @@
 package com.course.memorycolor;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -136,7 +137,7 @@ public class GameScreen extends AppCompatActivity {
             } else {
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        mContext);
+                        this);
 
                 // set title
                 alertDialogBuilder.setTitle("EXIT ALERT");

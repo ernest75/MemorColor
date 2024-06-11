@@ -211,22 +211,22 @@ public class ModelMemoryColor {
         }
         return random;
     }
-    // Method used to go to next player on the game , it returns a boolean that will be true when
-    // it finds another player alive and false when not.
-    // We use a int to keep reference of the count of each time the while loop works.
-    // On the while loop, the parameters to keep going are not to found a next player alive witch
-    // is expressed with the boolean found, and to be sure that count is smaller than the
-    // numberOfPlayers. We go to the next player by incrementing mCurrentPlayer variable,
-    // then we check if we arrived to the last player on the array by comparing the value of the
-    // current with the total number of players if are equal it means that we arrived to the end
-    // of the array (Note: currentPlayer shouldn't be never equal to number total of players as we
-    // initiate mCurrentPlayer to 0), and then we go to the first player by setting mCurrentPlayer
-    // to 0. Then we ask if that player is still alive by checking the array list of Boolean, if
-    // returns true we set the boolean found to true that will break the while loop and will finish
-    // the method by returning true as we found a player alive, if next player isn't alive we
-    // increment the count by 1 and the while loop will continue until it finds a new player alive
-    // or the count is equal to the number of players witch it means that all players are dead
-    // witch will make the method to finish and returning false as there are no players alive.
+     /*Method used to go to next player on the game , it returns a boolean that will be true when
+     it finds another player alive and false when not.
+     We use a int to keep reference of the count of each time the while loop works.
+     On the while loop, the parameters to keep going are not to found a next player alive witch
+     is expressed with the boolean found, and to be sure that count is smaller than the
+     numberOfPlayers. We go to the next player by incrementing mCurrentPlayer variable,
+     then we check if we arrived to the last player on the array by comparing the value of the
+     current with the total number of players if are equal it means that we arrived to the end
+     of the array (Note: currentPlayer shouldn't be never equal to number total of players as we
+     initiate mCurrentPlayer to 0), and then we go to the first player by setting mCurrentPlayer
+     to 0. Then we ask if that player is still alive by checking the array list of Boolean, if
+     returns true we set the boolean found to true that will break the while loop and will finish
+     the method by returning true as we found a player alive, if next player isn't alive we
+     increment the count by 1 and the while loop will continue until it finds a new player alive
+     or the count is equal to the number of players witch it means that all players are dead
+     witch will make the method to finish and returning false as there are no players alive.*/
     public boolean goToNextPlayer() {
 
         boolean found = false;

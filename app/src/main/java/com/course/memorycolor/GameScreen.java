@@ -1,6 +1,5 @@
 package com.course.memorycolor;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,18 +8,17 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.Toast;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.course.memorycolor.dagger.MemoryColor;
 import com.course.memorycolor.model.ModelMemoryColor;
@@ -53,7 +51,6 @@ public class GameScreen extends AppCompatActivity {
     public MediaPlayer mpRightAnswer;
     public Vibrator mVibrator;
     public MediaPlayer mpWrongAnswer;
-    public MediaPlayer mpWrongAnswerShort;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +62,7 @@ public class GameScreen extends AppCompatActivity {
         mButtonArrayList = new ArrayList<>();
         mpRightAnswer = MediaPlayer.create(mContext, R.raw.right_answer);
         mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-        mpWrongAnswer = MediaPlayer.create(mContext, R.raw.wrong_answer);
-        mpWrongAnswerShort = MediaPlayer.create(mContext, R.raw.wrong_answer_short);
-
-        //mModel = ModelMemoryColor.initialize(this);
+        mpWrongAnswer = MediaPlayer.create(mContext, R.raw.wrong_answer_short);
 
         //** Retrieving data from the saveInstanceState Bundle **\\
 
@@ -603,12 +597,10 @@ public class GameScreen extends AppCompatActivity {
         if (soundSwitch) {
             mpRightAnswer.setVolume(1, 1);
             mpWrongAnswer.setVolume(1, 1);
-            mpWrongAnswerShort.setVolume(1, 1);
 
         } else {
             mpRightAnswer.setVolume(0, 0);
             mpWrongAnswer.setVolume(0, 0);
-            mpWrongAnswerShort.setVolume(0, 0);
         }
 
         Boolean vibrationSwitch = mModel.mSharedPreferences.getBoolean("vibrationSwitch", true);
@@ -648,10 +640,8 @@ public class GameScreen extends AppCompatActivity {
         // turned off
         if (mModel.mNumPlayersAlive > 1) {
             mModel.mNumPlayersAlive--;
-            mpWrongAnswerShort.start();
-        } else {
-            mpWrongAnswer.start();
         }
+        mpWrongAnswer.start();
 
         if (mModel.mVibrationOn) {
 

@@ -1,4 +1,4 @@
-package com.course.memorycolor;
+package com.course.schneidermemorycolor;
 
 
 import android.content.Intent;
@@ -25,9 +25,9 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.course.memorycolor.dagger.MemoryColor;
-import com.course.memorycolor.data.DataBaseHandler;
-import com.course.memorycolor.model.ModelMemoryColor;
+import com.course.schneidermemorycolor.dagger.MemoryColor;
+import com.course.schneidermemorycolor.data.DataBaseHandler;
+import com.course.schneidermemorycolor.model.ModelMemoryColor;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.course.memorycolor.model;
+package com.course.schneidermemorycolor.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,8 +6,8 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.course.memorycolor.R;
-import com.course.memorycolor.data.PlayerNameAndScoreHandler;
+import com.course.schneidermemorycolor.R;
+import com.course.schneidermemorycolor.data.PlayerNameAndScoreHandler;
 
 import java.util.ArrayList;
 import java.util.Random;

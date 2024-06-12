@@ -1,4 +1,4 @@
-package com.course.memorycolor;
+package com.course.schneidermemorycolor;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,8 +20,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.course.memorycolor.dagger.MemoryColor;
-import com.course.memorycolor.model.ModelMemoryColor;
+import com.course.schneidermemorycolor.dagger.MemoryColor;
+import com.course.schneidermemorycolor.model.ModelMemoryColor;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,9 +1,9 @@
-package com.course.memorycolor.dagger;
+package com.course.schneidermemorycolor.dagger;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.course.memorycolor.model.ModelMemoryColor;
+import com.course.schneidermemorycolor.model.ModelMemoryColor;
 
 import javax.inject.Named;
 import javax.inject.Singleton;

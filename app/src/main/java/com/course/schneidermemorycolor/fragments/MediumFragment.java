@@ -1,4 +1,4 @@
-package com.course.memorycolor.fragments;
+package com.course.schneidermemorycolor.fragments;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.course.memorycolor.R;
-import com.course.memorycolor.dagger.MemoryColor;
-import com.course.memorycolor.data.DataBaseHandler;
-import com.course.memorycolor.model.ModelMemoryColor;
+import com.course.schneidermemorycolor.R;
+import com.course.schneidermemorycolor.dagger.MemoryColor;
+import com.course.schneidermemorycolor.data.DataBaseHandler;
+import com.course.schneidermemorycolor.model.ModelMemoryColor;
 
 import javax.inject.Inject;
 
@@ -22,18 +22,18 @@ import javax.inject.Inject;
  * Created by Ernest on 11/10/2016.
  */
 
-public class HardFragment extends Fragment {
+public class MediumFragment extends Fragment {
 
-    public HardFragment() {
 
-    }
 
     Context mContext;
 
-    int mLevel = 3;
-
     @Inject
     ModelMemoryColor mModel;
+    int mLevel = 2;
+    public MediumFragment() {
+
+    }
 
     @Override
     public void onAttach(Context context) {
@@ -44,16 +44,20 @@ public class HardFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        ((MemoryColor)getActivity().getApplication()).getMemoryComponent().injectHardFragment(this);
+
+        ((MemoryColor)getActivity().getApplication()).getMemoryComponent().injectMediumFragment(this);
 
         super.onCreate(savedInstanceState);
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragments_records_game, container, false);
+
+
     }
 
     @Override
@@ -62,14 +66,15 @@ public class HardFragment extends Fragment {
         ListView lvScoreRecords = (ListView) getView().findViewById(R.id.lvRecordsScore);
 
         Cursor c = mModel.mPlayerNameAndScoreHandler.queryNameAndScoreForLevel(mLevel);
-        SimpleCursorAdapter easyAdapter = new SimpleCursorAdapter(
+        SimpleCursorAdapter mediumAdapter = new SimpleCursorAdapter(
                 mContext,
                 R.layout.lv_records_game_item,
                 c,
                 new String[]{DataBaseHandler.NAME_COLUMN ,DataBaseHandler.SCORE_COLUMN},
                 new int[]{R.id.tvName,R.id.tvScore},
                 0);
-        lvScoreRecords.setAdapter(easyAdapter);
+        lvScoreRecords.setAdapter(mediumAdapter);
         super.onViewCreated(view, savedInstanceState);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.course.memorycolor;
+package com.course.schneidermemorycolor;
 
 
 import android.annotation.TargetApi;

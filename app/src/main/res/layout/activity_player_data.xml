@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.course.memorycolor.PlayerData">
+    tools:context="com.course.schneidermemorycolor.PlayerData">
 
     <TextView
         android:text="@string/chose_number_of_players"

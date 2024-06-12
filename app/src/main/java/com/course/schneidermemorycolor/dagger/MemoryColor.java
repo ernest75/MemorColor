@@ -1,9 +1,6 @@
-package com.course.memorycolor.dagger;
+package com.course.schneidermemorycolor.dagger;
 
-import android.app.Activity;
 import android.app.Application;
-
-import com.course.memorycolor.GameScreen;
 
 /**
  * Created by ernestschneiderolcina on 20/3/18.

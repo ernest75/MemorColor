@@ -1,17 +1,14 @@
-package com.course.memorycolor.dagger;
+package com.course.schneidermemorycolor.dagger;
 
-import android.app.Fragment;
-
-import com.course.memorycolor.GameScreen;
-import com.course.memorycolor.PlayerData;
-import com.course.memorycolor.fragments.EasyFragment;
-import com.course.memorycolor.fragments.HardFragment;
-import com.course.memorycolor.fragments.MediumFragment;
+import com.course.schneidermemorycolor.GameScreen;
+import com.course.schneidermemorycolor.PlayerData;
+import com.course.schneidermemorycolor.fragments.EasyFragment;
+import com.course.schneidermemorycolor.fragments.HardFragment;
+import com.course.schneidermemorycolor.fragments.MediumFragment;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import dagger.Provides;
 
 /**
  * Created by ernestschneiderolcina on 20/3/18.

@@ -1,4 +1,4 @@
-package com.course.memorycolor;
+package com.course.schneidermemorycolor;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,10 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.course.memorycolor.fragments.EasyFragment;
-import com.course.memorycolor.fragments.HardFragment;
-import com.course.memorycolor.fragments.MediumFragment;
-import com.course.memorycolor.model.ModelMemoryColor;
+import com.course.schneidermemorycolor.fragments.EasyFragment;
+import com.course.schneidermemorycolor.fragments.HardFragment;
+import com.course.schneidermemorycolor.fragments.MediumFragment;
+import com.course.schneidermemorycolor.model.ModelMemoryColor;
 
 import java.util.ArrayList;
 import java.util.List;

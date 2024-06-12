@@ -1,4 +1,4 @@
-package com.course.memorycolor.data;
+package com.course.schneidermemorycolor.data;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.logging.Level;
 
 /**
  * Created by Ernest on 04/10/2016.
